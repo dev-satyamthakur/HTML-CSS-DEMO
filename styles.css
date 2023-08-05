@@ -1,7 +1,17 @@
 h1 {
-    color: cadetblue;
+    color: darkcyan;
+    background-color: aliceblue;
+    padding: 12px;
+    margin: 24px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
 }
 
 p {
-    color: crimson;
+    color: slateblue;
+    text-align: left;
+}
+
+div {
+    color: orange;
 }
