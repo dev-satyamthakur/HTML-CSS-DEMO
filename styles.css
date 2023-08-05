@@ -10,11 +10,14 @@ h1 {
 p {
     color: slateblue;
     text-align: left;
-    column-count: 3;
 }
 
 div {
     color: orange;
     border: 4px solid #00c69b;
     padding: 24px;
+}
+
+span {
+    display: block;
 }
