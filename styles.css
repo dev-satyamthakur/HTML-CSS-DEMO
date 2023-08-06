@@ -30,3 +30,7 @@ div#content {
 div p {
     color: purple;
 }
+
+a[href] {
+    background-color: aquamarine;
+}
