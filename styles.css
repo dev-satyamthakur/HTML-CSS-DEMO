@@ -21,6 +21,12 @@ p.success {
 }
 
 p.success.feedback {
-    border: 1px dashed orange;
+    border: 2px dashed orange;
     color: orange;
+    padding: 24px;
+}
+
+div#content {
+    background-color: rgb(245, 255, 239);
+    padding: 24px;
 }
