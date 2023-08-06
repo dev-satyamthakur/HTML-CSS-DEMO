@@ -12,16 +12,15 @@ p {
     text-align: left;
 }
 
-.error {
+p.error {
     color: red;
 }
 
-div {
-    color: orange;
-    border: 4px solid #00c69b;
-    padding: 24px;
+p.success {
+    color: green;
 }
 
-span {
-    display: block;
+p.success.feedback {
+    border: 1px dashed orange;
+    color: orange;
 }
