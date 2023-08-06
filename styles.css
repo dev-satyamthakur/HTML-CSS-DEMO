@@ -12,6 +12,10 @@ p {
     text-align: left;
 }
 
+.error {
+    color: red;
+}
+
 div {
     color: orange;
     border: 4px solid #00c69b;
