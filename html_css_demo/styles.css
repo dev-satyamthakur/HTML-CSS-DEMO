@@ -31,6 +31,17 @@ div p {
     color: purple;
 }
 
-a[href] {
-    background-color: aquamarine;
+a[href*="satyam"] {
+    background-color: mediumseagreen;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
 }
+
+a[href$=".com"] {
+    background-color: azure;
+    color: black;
+}
+
