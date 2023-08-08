@@ -9,6 +9,21 @@ header {
     left: 0;
 }
 
+nav {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+nav li {
+    width: 25%;
+    display: inline-block;
+    font-size: 24px;
+}
+
+nav ul {
+    white-space: nowrap;
+}
+
 header h1 {
     color: white;
     border: 8px solid white;
