@@ -59,6 +59,16 @@ main {
     box-sizing: border-box;
 }
 
+article h2 {
+    color: #f63232;
+    font-size: 48px;
+}
+
+article p {
+    line-height: 2em;
+    color: #4b4b4b;
+}
+
 .banner {
     position: relative;
 }
