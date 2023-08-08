@@ -25,6 +25,10 @@ nav li a {
     color: #4b4b4b;
 }
 
+nav li a.join {
+    color: #f63232;
+}
+
 nav ul {
     white-space: nowrap;
     max-width: 1200px;
