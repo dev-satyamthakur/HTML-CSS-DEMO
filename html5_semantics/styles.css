@@ -20,8 +20,15 @@ nav li {
     font-size: 24px;
 }
 
+nav li a {
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
 nav ul {
     white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header h1 {
