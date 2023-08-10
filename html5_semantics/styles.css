@@ -147,3 +147,12 @@ nav li a:hover {
     position: relative;
     top: -4px;
 }
+
+form input:focus {
+    border: 4px dashed #4b4b4b;
+    outline: none;
+}
+
+form input:valid {
+    border: 4px solid rgb(139, 232, 0);
+}
