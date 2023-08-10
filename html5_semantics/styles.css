@@ -142,3 +142,8 @@ nav li a:hover {
     background-color: pink;
     padding: 4px;
 }
+
+.images li:hover {
+    position: relative;
+    top: -4px;
+}
