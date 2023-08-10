@@ -156,3 +156,8 @@ form input:focus {
 form input:valid {
     border: 4px solid rgb(139, 232, 0);
 }
+
+article p::first-line {
+    font-weight: bold;
+    size: 1.2em;
+}
