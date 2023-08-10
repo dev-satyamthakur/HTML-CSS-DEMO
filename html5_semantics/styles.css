@@ -161,3 +161,7 @@ article p::first-line {
     font-weight: bold;
     size: 1.2em;
 }
+
+section.join p::selection {
+    background-color: pink;
+}
