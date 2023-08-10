@@ -135,3 +135,10 @@ footer {
 .banner h2 span {
     font-size: 1.3em;
 }
+
+/* pseudo classes */
+nav li a:hover {
+    text-decoration: underline;
+    background-color: pink;
+    padding: 4px;
+}
