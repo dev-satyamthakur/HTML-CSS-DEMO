@@ -13,6 +13,3 @@ var b = 20
 console.log(a)
 console.log(b)
 
-
-
-// fun(5)
