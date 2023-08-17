@@ -13,4 +13,11 @@
 // console.log(a)
 // console.log(b)
 
-alert("Hello, world");
+var myvar = 10
+console.log(myvar)
+
+myvar = 5
+console.log(myvar)
+
+myvar = "Fruit"
+console.log(myvar)
