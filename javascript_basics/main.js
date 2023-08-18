@@ -23,5 +23,14 @@
 // console.log(myvar)
 
 const fruits = ["Apple", "Mango", "Orange"]
-console.log(fruits[1])
+const newfruits = fruits.map(function (cvalue) {
+    return cvalue + "Neo";
+})
+console.log(fruits)
+console.log(newfruits)
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i])
+}
+
 
