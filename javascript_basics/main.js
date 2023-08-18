@@ -13,11 +13,15 @@
 // console.log(a)
 // console.log(b)
 
-var myvar = 10
-console.log(myvar)
+// var myvar = 10
+// console.log(myvar)
 
-myvar = 5
-console.log(myvar)
+// myvar = 5
+// console.log(myvar)
 
-myvar = "Fruit"
-console.log(myvar)
+// myvar = "Fruit"
+// console.log(myvar)
+
+const fruits = ["Apple", "Mango", "Orange"]
+console.log(fruits[1])
+
