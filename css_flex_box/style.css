@@ -1,5 +1,7 @@
 .flex-container {
     display: flex;
+    border: 2px solid gray;
+    flex-direction: column;
 }
 
 .flex-item {
@@ -7,5 +9,5 @@
     height: 140px;
     border: 2px solid black;
     margin: 24px;
-    background-color: azure;
+    background-color: yellowgreen;
 }
