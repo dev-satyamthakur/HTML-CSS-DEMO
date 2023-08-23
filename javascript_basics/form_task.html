@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,27 +39,70 @@
             }
         }        
     </script>
+    <style>
+        body {
+            margin: 0 0 0 0;
+        }
+
+        .container {
+            width: auto;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            row-gap: 2rem;
+        }
+
+        .inputfield {
+            display: grid;
+            grid-template-columns: repeat(2, 10rem);
+            margin: 24px;
+        }
+
+        .button input {
+            align-items: center; justify-content: center; width: 100%; padding: 8px; border-radius: 8px;
+        }
+    </style>
 
 </head>
+
 <body>
-    <h1>User Details Form</h1>
-    <form onsubmit="return canSubmit()">
-        <label for="username">Name: </label>
-        <input type="text" name="username" id="username"> <br><br>
+    <div class="container">
+        <form action="" onsubmit="return canSubmit()">
+            <div class="inputfield">
+                <label for="username">Name: </label>
+                <input type="text" name="username" id="username">
+            </div>
 
-        <label for="mobile">Mobile: </label>
-        <input type="number" name="mobile" id="mobile" minlength="10" maxlength="10"> <br><br>
-        
-        <label for="email">Email: </label>
-        <input type="text" name="email" id="email"> <br><br>
+            <div class="inputfield">
+                <label for="mobile">Mobile: </label>
+                <input type="number" name="mobile" id="mobile" minlength="10" maxlength="10">
+            </div>
 
-        <label for="pasword">Password: </label>
-        <input type="password" name="password" id="password">  <br><br>
+            <div class="inputfield">
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="email">
+            </div>
 
-        <label for="cnfpassword">Confirm Password:  </label>
-        <input type="password" name="cnfpassword" id="cnfpassword"> <br><br>
+            <div class="inputfield">
+                <label for="pasword">Password: </label>
+                <input type="password" name="password" id="password">
+            </div>
 
-        <input type="submit" value="Submit">
-    </form>
+            <div class="inputfield">
+                <label for="cnfpassword">Confirm Password: </label>
+                <input type="password" name="cnfpassword" id="cnfpassword">
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Submit" style="">
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
