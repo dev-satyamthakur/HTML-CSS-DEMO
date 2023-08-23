@@ -4,18 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function validateEmail(email) {
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        function canSubmit() {
+            var pwd = document.forms[0].password.value;
+            var cnfpwd = document.forms[0].cnfpassword.value;
+
+            if (pwd != cnfpwd) {
+                alert("Password does not matches confirm password.")
+                return false;
+            }
+
+            var name = document.forms[0].username.value;
+            if (name == "") {
+                alert("Username field should not be empty!")
+                return false;
+            }
+
+            var email = document.forms[0].email.value;
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email!")
+                return false;
+            }
+
+            var mobile = document.forms[0].mobile.value;
+            if (mobile.length != 10) {
+                alert("Please enter a valid mobile number")
+                return false;
+            }
+        }        
+    </script>
+
 </head>
 <body>
     <h1>User Details Form</h1>
-    <form>
+    <form onsubmit="return canSubmit()">
         <label for="username">Name: </label>
         <input type="text" name="username" id="username"> <br><br>
 
         <label for="mobile">Mobile: </label>
-        <input type="number" name="mobile" id="mobile" minlength="10"> <br><br>
+        <input type="number" name="mobile" id="mobile" minlength="10" maxlength="10"> <br><br>
         
         <label for="email">Email: </label>
-        <input type="email" name="email" id="email"> <br><br>
+        <input type="text" name="email" id="email"> <br><br>
 
         <label for="pasword">Password: </label>
         <input type="password" name="password" id="password">  <br><br>
