@@ -6,9 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>User Details Form</h1>
     <form>
-        <label for="">Name: </label>
-        <input type="text" name="username" id="username"> <br>
+        <label for="username">Name: </label>
+        <input type="text" name="username" id="username"> <br><br>
+
+        <label for="mobile">Mobile: </label>
+        <input type="number" name="mobile" id="mobile" minlength="10"> <br><br>
+        
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email"> <br><br>
+
+        <label for="pasword">Password: </label>
+        <input type="password" name="password" id="password">  <br><br>
+
+        <label for="cnfpassword">Confirm Password:  </label>
+        <input type="password" name="cnfpassword" id="cnfpassword"> <br><br>
+
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
