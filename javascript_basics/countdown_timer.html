@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var intervalId;
+        function startTimer(contolId) {
+            var control = document.getElementById(contolId);
+            var seconds = control.value;
+            seconds = seconds - 1;
+
+            if (seconds == 0) {
+                control.value = "Done";
+                return;
+            }
+            else {
+                control.value = seconds;
+            }
+
+            intervalId = setTimeout(function() {startTimer('txtBox')}, 1000);
+        }
+        function stopTimer() {
+            clearTimeout(intervalId);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="10" id="txtBox">
+    <br><br>
+    <input type="button" value="Start Timer" onclick="startTimer('txtBox')">
+    <input type="button" value="Stop Timer" onclick="stopTimer()">
+</body>
+</html>
