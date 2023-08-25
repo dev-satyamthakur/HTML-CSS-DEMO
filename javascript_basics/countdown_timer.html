@@ -6,23 +6,31 @@
     <title>Document</title>
     <script>
         var intervalId;
+        var startTimeInter;
+        var seconds;
         function startTimer(contolId) {
             var control = document.getElementById(contolId);
-            var seconds = control.value;
-            seconds = seconds - 1;
+            seconds = control.value;
+            startTimeInter = seconds;
 
-            if (seconds == 0) {
-                control.value = "Done";
-                return;
-            }
-            else {
-                control.value = seconds;
-            }
-
-            intervalId = setTimeout(function() {startTimer('txtBox')}, 1000);
+            intervalId = setInterval(() => {
+                seconds -= 1;
+                
+                if (seconds == 0) {
+                    control.value = "Done";
+                    stopTimer();
+                    return;
+                }
+                else {
+                    control.value = seconds;
+                }
+            }, 1000);
         }
         function stopTimer() {
             clearTimeout(intervalId);
+            var diff = startTimeInter - seconds;
+
+            document.getElementById('showlap').innerText = diff;
         }
     </script>
 </head>
@@ -31,5 +39,7 @@
     <br><br>
     <input type="button" value="Start Timer" onclick="startTimer('txtBox')">
     <input type="button" value="Stop Timer" onclick="stopTimer()">
+
+    <p id="showlap"></p>
 </body>
 </html>
