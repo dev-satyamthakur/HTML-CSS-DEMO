@@ -8,6 +8,7 @@
         var intervalId;
         var startTimeInter;
         var seconds;
+        var text = "";
         function startTimer(contolId) {
             var control = document.getElementById(contolId);
             seconds = control.value;
@@ -29,8 +30,8 @@
         function stopTimer() {
             clearTimeout(intervalId);
             var diff = startTimeInter - seconds;
-
-            document.getElementById('showlap').innerText = diff;
+            text = text + "\n" + diff
+            document.getElementById('showlap').innerText = text;
         }
     </script>
 </head>
