@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
 
             intervalId = setInterval(() => {
                 seconds -= 1;
-                
+
                 if (seconds == 0) {
                     control.value = "Done";
                     stopTimer();
@@ -40,14 +41,30 @@
             document.getElementById('txtBox').value = 10;
         }
     </script>
+    <style>
+        div {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
 </head>
-<body>
-    <input type="text" value="10" id="txtBox">
-    <br><br>
-    <input type="button" value="Start Timer" onclick="startTimer('txtBox')">
-    <input type="button" value="Stop Timer" onclick="stopTimer()">
-    <input type="button" value="Reset" onclick="resetTimer()">
 
-    <p id="showlap"></p>
+<body>
+    <div>
+        <input type="text" value="10" id="txtBox">
+        <br><br>
+        <input type="button" value="Start Timer" onclick="startTimer('txtBox')">
+        <br>
+        <input type="button" value="Stop Timer" onclick="stopTimer()">
+        <br>
+        <input type="button" value="Reset" onclick="resetTimer()">
+
+        <p id="showlap"></p>
+    </div>
 </body>
+
 </html>
