@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        setInterval(getCurrentDateTime, 1000);
+        function getCurrentDateTime() {
+            document.getElementById("timeDiv").innerHTML = new Date();
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Timing Functions</h1>
+    <div id="timeDiv"></div>
+    <input type="button" onclick="setInterval" value="Click">
+</body>
+</html>
