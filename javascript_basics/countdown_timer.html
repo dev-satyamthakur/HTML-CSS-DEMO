@@ -33,6 +33,12 @@
             text = text + "\n" + diff
             document.getElementById('showlap').innerText = text;
         }
+
+        function resetTimer() {
+            text = "";
+            document.getElementById('showlap').innerText = text;
+            document.getElementById('txtBox').value = 10;
+        }
     </script>
 </head>
 <body>
@@ -40,6 +46,7 @@
     <br><br>
     <input type="button" value="Start Timer" onclick="startTimer('txtBox')">
     <input type="button" value="Stop Timer" onclick="stopTimer()">
+    <input type="button" value="Reset" onclick="resetTimer()">
 
     <p id="showlap"></p>
 </body>
