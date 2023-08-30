@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+            var number = document.getElementById("num").value;
+            var newnum = number.toString();
+            
+            var revnum = ""
+            for (let i = newnum.length - 1; i >= 0; i--) {
+                revnum += newnum[i];
+            }
+
+            if (newnum == revnum) {
+                alert("Number is Palindrome.")
+            }
+            else {
+                alert("Number is not Palindrome.")
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <form onsubmit="check()">
+        <input type="number" name="num" id="num">
+        <input type="submit" value="Check">
+    </form>
+</body>
+</html>
