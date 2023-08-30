@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <script>
         var intervalId;
         function startImageSlideShow() {
-            intervalId = setInterval(setImage, 500);
+            intervalId = setInterval(setImage, 1000);
         }
         function stopImageSlideShow() {
             clearInterval(intervalId)
@@ -21,11 +22,25 @@
             }
         }
     </script>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
 </head>
+
 <body>
-    <img src="images/1.jpg" id="image" style="width: auto; height: 400px;">
-    <br><br><br>
-    <input type="button" value="Start Slide Show" onclick="startImageSlideShow()">
-    <input type="button" value="Stop Slide Show" onclick="stopImageSlideShow()">
+    <div>
+        <img src="images/1.jpg" id="image" style="width: auto; height: 400px;">
+        <br><br><br>
+        <input type="button" value="Start Slide Show" onclick="startImageSlideShow()">
+        <br>
+        <input type="button" value="Stop Slide Show" onclick="stopImageSlideShow()">
+    </div>
 </body>
+
 </html>
