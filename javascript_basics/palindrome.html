@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function check() {
-            var number = document.getElementById("num").value;
+        function checkPalin() {
+            var number = document.getElementById("palinum").value;
             var newnum = number.toString();
-            
+
             var revnum = ""
             for (let i = newnum.length - 1; i >= 0; i--) {
                 revnum += newnum[i];
             }
+
+            console.log(typeof (number))
 
             if (newnum == revnum) {
                 alert("Number is Palindrome.")
@@ -21,13 +24,66 @@
                 alert("Number is not Palindrome.")
             }
         }
+
+        function checkArm() {
+            var number = document.getElementById("armnum").value;
+            let num = parseInt(number);
+            let cubesum = 0;
+            while (num != 0) {
+                let currNum = num % 10;
+                currNum = currNum * currNum * currNum;
+                cubesum += currNum;
+                num = parseInt(num / 10);
+            }
+
+            if (cubesum == number) {
+                alert("Number is Armstrong")
+            }
+            else {
+                alert("Number is not Armstrong")
+            }
+        }
     </script>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 24px;
+        }
+        div div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            border: 2px solid gray;
+            height: 200px;
+            background-color: aquamarine;
+        }
+    </style>
 </head>
+
 <body>
-    <h2>Enter a Number</h2>
-    <form onsubmit="check()">
-        <input type="number" name="num" id="num">
-        <input type="submit" value="Check">
-    </form>
+    <center>
+        <div>
+            <div>
+                <h2>Enter a Number<br>to Check Palindrome</h2>
+                <form onsubmit="checkPalin()">
+                    <input type="number" name="palinum" id="palinum">
+                    <input type="submit" value="Check">
+                </form>
+            </div>
+
+            <div>
+                <h2>Enter a Number<br>to Check Armstrong</h2>
+                <form onsubmit="checkArm()">
+                    <input type="number" name="armnum" id="armnum">
+                    <input type="submit" value="Check">
+                </form>
+            </div>
+        </div>
+    </center>
 </body>
+
 </html>
