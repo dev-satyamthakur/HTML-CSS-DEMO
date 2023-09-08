@@ -7,11 +7,14 @@
     <script src="jquery.js"></script>
     <script>
         $(document).ready(function(){
-            $('#name').focus(function(){
-                $(this).css('background-color', 'lime')
+            $('#name, #class, #country').focus(function(){
+                $(this).css('background-color', 'yellow')
             })
-            $('#name').blur(function(){
+            $('#name, #class, #country').blur(function(){
                 $(this).css('background-color', '')
+            })
+            $('#country').change(function(){
+                $(this).css('background-color', 'lime')
             })
         })
     </script>
@@ -22,7 +25,7 @@
         <label for="name">Name</label> <input type="text" id="name" placeholder="Enter Name"> <br> <br>
         <label for="class">Class</label> <input type="text" id="class" placeholder="Enter Class"> <br> <br>
         <label for="">Country</label>
-        <select name="" id="scountry">
+        <select name="" id="country">
             <option value="India">India</option>
             <option value="India">Nepal</option>
             <option value="India">Bhutan</option>
